@@ -22,6 +22,7 @@
     "@biotope/resource-loader": "2.1.1",
     "@virtualidentity/css-helper": "^2.0",
     "breakpoint-sass": "2.7.1",
+    "classnames": "^2.2.6",
     "gsap": "^3.2.6",
     "handlebars": "^4.2.0",
     "sanitize.css": "^11.0.0",

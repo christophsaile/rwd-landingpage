@@ -1,5 +1,116 @@
 @import "node_modules/@biotope/element/lib/host.mixin";
+@import "../../resources/scss/defaultSassImports.scss";
 
-@include host('rwd-nav') {
+@include host("rwd-nav") {
+	.nav {
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		height: 100vh;
+		top: 0;
+		right: 0;
+		padding: 2rem 2rem 2rem 1rem;
+        background-color: lightcoral;
+        z-index: 10;
 
+		@include breakpoint($medium) {
+			padding: 2rem 4rem 2rem 2rem;
+		}
+
+		&MenuOpen {
+			.navMenu__icon {
+				span {
+					&:first-child {
+						transform: translateY(4px) rotate(45deg);
+					}
+
+					&:last-child {
+						transform: translateY(-4px) rotate(-45deg);
+					}
+				}
+			}
+			.navMenu__items {
+				transform: translateX(0);
+				color: $black;
+
+				.navMenu__link {
+					a {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&Menu {
+			&__icon {
+                position: relative;
+                z-index: 9;
+				span {
+					display: block;
+					width: 2rem;
+					height: 0.1rem;
+					margin-top: 0.4rem;
+					background-color: $black;
+					transition: all 0.2s ease-in-out;
+
+					&:first-child {
+						margin: 0;
+					}
+				}
+			}
+
+			&__items {
+				position: absolute;
+				display: flex;
+				top: 0;
+				right: 0;
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+				background: rgba($color: #000, $alpha: 0.95);
+				padding: 6rem 0;
+				transform: translateX(100%);
+                transition: all 0.3s cubic-bezier(1, 0.5, 0, 1);
+                z-index: 7;
+
+				ul {
+					margin: auto;
+				}
+			}
+
+			&__link {
+				list-style: none;
+
+				a {
+					padding-top: 3rem;
+					display: block;
+					color: $white;
+					background: none;
+					text-align: center;
+					text-decoration: none;
+					opacity: 0;
+					font-size: 5.5rem;
+					transition: color 0.2s ease-in-out, opacity 0.4s ease-in-out;
+
+					@include breakpoint($medium) {
+						font-size: 6.5rem;
+					}
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: $green;
+					}
+				}
+			}
+		}
+
+		&Counter {
+            z-index: 8;
+		}
+
+		&Arrow {
+            z-index: 8;
+		}
+	}
 }

@@ -10,7 +10,9 @@ interface RwdNavProps {}
 /**
  * State
  */
-interface RwdNavState {}
+interface RwdNavState {
+	isMenuOpen: boolean
+}
 
 /**
  * Methods
