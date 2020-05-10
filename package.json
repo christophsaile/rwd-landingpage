@@ -11,6 +11,7 @@
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
+    "build:netlify": "gulp build:netlify",
     "test:travis": "mocha test/travis/build.js",
     "test:ci": "echo \"Not implemented yet\"",
     "test:e2e": "echo \"Not implemented yet\"",
@@ -25,7 +26,8 @@
     "handlebars": "4.2.0",
     "sanitize.css": "^11.0.0",
     "scrollmagic": "^2.0.7",
-    "susy": "2.2.14"
+    "susy": "2.2.14",
+    "vinyl-paths": "^3.0.1"
   },
   "devDependencies": {
     "@biotope/cli": "^1.1.5",
