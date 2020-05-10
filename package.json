@@ -23,7 +23,7 @@
     "@virtualidentity/css-helper": "^2.0",
     "breakpoint-sass": "2.7.1",
     "gsap": "^3.2.6",
-    "handlebars": "4.2.0",
+    "handlebars": "^4.2.0",
     "sanitize.css": "^11.0.0",
     "scrollmagic": "^2.0.7",
     "susy": "2.2.14",
@@ -41,6 +41,6 @@
   },
   "engines": {
     "node": ">=10.16",
-    "npm": ">=6.9"
+    "npm": ">=6.13.4"
   }
 }
