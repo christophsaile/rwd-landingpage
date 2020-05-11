@@ -20,12 +20,14 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 		learnMoreIconRef: createRef<HTMLElement>()
 	};
 
-	public allSections: NodeListOf<HTMLElement>;
+  public allSections: NodeListOf<HTMLElement>;
+  public firstSection: HTMLElement;
 	public lastSection: HTMLElement;
 	public footer: HTMLElement;
 
 	ready() {
-		this.allSections = document.querySelectorAll('.fullpage');
+    this.allSections = document.querySelectorAll('.fullpage');
+    this.firstSection = this.allSections[0];
 		this.lastSection = this.allSections[this.allSections.length - 1];
 		this.footer = document.querySelector('#footer');
 
@@ -118,6 +120,14 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 			triggerHook: 0.5
 		})
 			.setClassToggle(this.refs.learnMoreIconRef.current, 'switchArrow')
+			.addTo(controller);
+
+		let showText = new ScrollMagic.Scene({
+			triggerElement: this.firstSection,
+			triggerHook: 0.9,
+			duration: this.firstSection.clientHeight
+		})
+			.setClassToggle(this.refs.learnMoreTextRef.current, 'showText')
 			.addTo(controller);
 	};
 
