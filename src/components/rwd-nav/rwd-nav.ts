@@ -2,84 +2,139 @@ import Component, { HTMLFragment, createRef } from '@biotope/element';
 import { template } from './template';
 import { RwdNavProps, RwdNavState, RwdNavMethods } from './interfaces';
 
-import * as ScrollMagic from "scrollmagic";
+import * as ScrollMagic from 'scrollmagic';
 
-export class RwdNav extends Component< RwdNavProps, RwdNavState > {
-  public static componentName = 'rwd-nav';
-  
-  public static attributes = [];
+export class RwdNav extends Component<RwdNavProps, RwdNavState> {
+	public static componentName = 'rwd-nav';
 
-  private refs = {
-    menuIconRef: createRef<HTMLElement>(),
-    counterRef: createRef<HTMLElement>(),
-    counterFirstItemRef: createRef<HTMLElement>(),
-    counterLastItemRef: createRef<HTMLElement>(),
-    learnMoreRef: createRef<HTMLElement>(),
-    learnMoreTextRef: createRef<HTMLElement>(),
-    learnMoreIconRef: createRef<HTMLElement>(),
-  };
+	public static attributes = [];
 
-  public allSections: NodeListOf<HTMLElement>;
+	private refs = {
+		menuIconRef: createRef<HTMLElement>(),
+		menuItemsRef: createRef<HTMLElement>(),
+		counterRef: createRef<HTMLElement>(),
+		counterFirstItemRef: createRef<HTMLElement>(),
+		counterLastItemRef: createRef<HTMLElement>(),
+		learnMoreRef: createRef<HTMLElement>(),
+		learnMoreTextRef: createRef<HTMLElement>(),
+		learnMoreIconRef: createRef<HTMLElement>()
+	};
 
-  ready() {
-    this.allSections = document.querySelectorAll(".fullpage");
+	public allSections: NodeListOf<HTMLElement>;
+	public lastSection: HTMLElement;
+	public footer: HTMLElement;
 
-    this.initMenu();
-    this.initCounter();
-  }
+	ready() {
+		this.allSections = document.querySelectorAll('.fullpage');
+		this.lastSection = this.allSections[this.allSections.length - 1];
+		this.footer = document.querySelector('#footer');
 
-  public initMenu = () => {
-    this.refs.menuIconRef.current.addEventListener("click", this.handleMenuClick);
-  }
+		this.initMenu();
+		this.initCounter();
+		this.initLearnMore();
+	}
 
-  public handleMenuClick = () => {
-    this.setState({
-      isMenuOpen: !this.state.isMenuOpen
-    })
-    console.log(this.state.isMenuOpen);
-  }
+	public initMenu = () => {
+		this.refs.menuIconRef.current.addEventListener(
+			'click',
+			this.handleIconClick
+		);
+		this.refs.menuItemsRef.current.addEventListener(
+			'click',
+			this.handleMenuClick
+		);
+	};
 
-  public initCounter = () => {
-    this.setLastPageNumber();
-    this.counterScrollAnimation();
-  }
+	public handleIconClick = () => {
+		this.setState({
+			isMenuOpen: !this.state.isMenuOpen
+		});
+	};
 
-  public setLastPageNumber = () => {
-    const numberOfSections: String = this.allSections.length.toString();
-		this.refs.counterLastItemRef.current.innerHTML = "0" + numberOfSections;
-  }
+	public handleMenuClick = () => {
+		this.setState({
+			isMenuOpen: false
+		});
+	};
 
-  public counterScrollAnimation = () => {
-    const currentPage: HTMLElement = this.refs.counterFirstItemRef.current;
+	public initCounter = () => {
+		this.setLastPageNumber();
+		this.counterScrollAnimation();
+	};
+
+	public setLastPageNumber = () => {
+		const numberOfSections: String = this.allSections.length.toString();
+		this.refs.counterLastItemRef.current.innerHTML = '0' + numberOfSections;
+	};
+
+	public counterScrollAnimation = () => {
+		const currentPage: HTMLElement = this.refs.counterFirstItemRef.current;
 		let controller = new ScrollMagic.Controller();
 
 		this.allSections.forEach((element, index) => {
 			let scene = new ScrollMagic.Scene({
 				triggerElement: element,
-				duration: "100%",
+				duration: '100%',
 				triggerHook: 0.5
 			})
 				.addTo(controller)
-				.on("enter", function() {
-					currentPage.innerHTML = "0" + (index + 1);
-					currentPage.setAttribute("href", '#'+element.id);
+				.on('enter', function() {
+					currentPage.innerHTML = '0' + (index + 1);
+					currentPage.setAttribute('href', '#' + element.id);
 				});
 		});
-  }
+	};
 
-  protected readonly defaultProps: RwdNavProps = {};
+	public initLearnMore = () => {
+		this.refs.learnMoreRef.current.addEventListener(
+			'click',
+			this.handleLearnMoreClick
+		);
+		this.learnMoreScrollAnimation();
+	};
 
-  protected readonly defaultState: RwdNavState = {
-    isMenuOpen: false
-  };
-  
-  public methods: RwdNavMethods = {};
+	public handleLearnMoreClick = () => {
+		if (
+			this.refs.learnMoreIconRef.current.classList.contains('switchArrow')
+		) {
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: 'smooth'
+			});
+		} else {
+			window.scrollBy({
+				top: window.innerHeight,
+				left: 0,
+				behavior: 'smooth'
+			});
+		}
+	};
 
-  public render(): HTMLFragment {
-    return template( { ...this.props, ...this.state, ...this.methods },
-      this.refs
-      );
-  }
+	public learnMoreScrollAnimation = () => {
+		let controller = new ScrollMagic.Controller();
+		let switchArrow = new ScrollMagic.Scene({
+			triggerElement: this.lastSection,
+			triggerHook: 0.5
+		})
+			.setClassToggle(this.refs.learnMoreIconRef.current, 'switchArrow')
+			.addTo(controller);
+	};
+
+	protected readonly defaultProps: RwdNavProps = {};
+
+	protected readonly defaultState: RwdNavState = {
+		isMenuOpen: false
+	};
+
+	public methods: RwdNavMethods = {};
+
+	public render(): HTMLFragment {
+		return template(
+			{ ...this.props, ...this.state, ...this.methods },
+			this.refs
+		);
+	}
 }
 
 RwdNav.register();

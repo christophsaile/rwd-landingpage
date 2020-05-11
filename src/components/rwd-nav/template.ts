@@ -21,7 +21,7 @@ export const template = (
           <span></span>
           <span></span>
         </div>
-        <div class="navMenu__items">
+        <div ref=${refs.menuItemsRef} class="navMenu__items">
           <ul>
             <li class="navMenu__link"><a href="#"><span>Section 1</span></a></li>
             <li class="navMenu__link"><a href="#section2"><span>Section 2</span></a></li>
