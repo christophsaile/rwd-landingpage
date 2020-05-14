@@ -2,6 +2,7 @@ import Component, { HTMLFragment, createRef } from '@biotope/element';
 import { template } from './template';
 import { RwdNavProps, RwdNavState, RwdNavMethods } from './interfaces';
 
+import { Swipe } from '../../resources/js/swipeHandler';
 import * as ScrollMagic from 'scrollmagic';
 
 export class RwdNav extends Component<RwdNavProps, RwdNavState> {
@@ -45,6 +46,10 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 			'click',
 			this.handleMenuClick
 		);
+		let swiper = new Swipe('body');
+		swiper.onLeft(() => this.setState({isMenuOpen: true}))
+		swiper.onRight(() => this.setState({isMenuOpen: false}));
+		swiper.run()
 	};
 
 	public handleIconClick = () => {
