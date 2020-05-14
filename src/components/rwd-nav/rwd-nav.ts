@@ -21,14 +21,14 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 		learnMoreIconRef: createRef<HTMLElement>()
 	};
 
-  public allSections: NodeListOf<HTMLElement>;
-  public firstSection: HTMLElement;
+	public allSections: NodeListOf<HTMLElement>;
+	public firstSection: HTMLElement;
 	public lastSection: HTMLElement;
 	public footer: HTMLElement;
 
 	ready() {
-    this.allSections = document.querySelectorAll('.fullpage');
-    this.firstSection = this.allSections[0];
+		this.allSections = document.querySelectorAll('.fullpage');
+		this.firstSection = this.allSections[0];
 		this.lastSection = this.allSections[this.allSections.length - 1];
 		this.footer = document.querySelector('#footer');
 
@@ -42,14 +42,13 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 			'click',
 			this.handleIconClick
 		);
+
 		this.refs.menuItemsRef.current.addEventListener(
 			'click',
 			this.handleMenuClick
 		);
-		let swiper = new Swipe('body');
-		swiper.onLeft(() => this.setState({isMenuOpen: true}))
-		swiper.onRight(() => this.setState({isMenuOpen: false}));
-		swiper.run()
+		
+		this.handleSwipe();
 	};
 
 	public handleIconClick = () => {
@@ -63,6 +62,13 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 			isMenuOpen: false
 		});
 	};
+
+	public handleSwipe = () => {
+		let swiper = new Swipe('body');
+		swiper.onLeft(() => this.setState({ isMenuOpen: true }));
+		swiper.onRight(() => this.setState({ isMenuOpen: false }));
+		swiper.run();
+	}
 
 	public initCounter = () => {
 		this.setLastPageNumber();
