@@ -4,9 +4,6 @@
 @include host("rwd-nav") {
 	.nav {
 		position: fixed;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 		height: 100%;
 		top: 0;
 		right: 0;
@@ -16,6 +13,14 @@
 
 		@include breakpoint($medium) {
 			padding: 2rem 4rem 2rem 2rem;
+		}
+
+		&Items {
+			display: flex;
+			height: 100%;
+			width: 100%;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 
 		&MenuOpen {
@@ -69,16 +74,18 @@
 		&Menu {
 			&__icon {
 				position: relative;
+				line-height: 0;
 				z-index: 9;
 				span {
 					display: block;
-					width: 2rem;
-					height: 0.1rem;
-					margin-top: 0.4rem;
+					width: 3rem;
+					height: 0.2rem;
+					margin-top: 0.6rem;
 					background-color: $black;
 					transition: all 0.2s ease-in-out;
 
 					&:first-child {
+						display: inline-block;
 						margin: 0;
 					}
 				}
@@ -134,15 +141,18 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
+			right: 0;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			text-align: center;
+			align-items: center;
+			padding: 0 2rem 0 1rem;
 			transition: right $transition-default;
 			z-index: 8;
 
 			@include breakpoint($medium) {
-				right: 4rem;
+				padding: 0 4rem 0 2rem;
 			}
 
 			&__item {
@@ -194,6 +204,7 @@
 		&LearnMore {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
 			transition: all $transition-default;
 			z-index: 8;
 

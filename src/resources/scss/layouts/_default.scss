@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     min-width: $body-min-width;
+    font-size: $body-font-size;
 }
 
 html {
@@ -16,7 +17,6 @@ html {
 body {
     font-family: $body-font-family;
     background-color: $body-bg;
-    font-size: $body-font-size;
     line-height: $body-line-height;
     color: $black;
     min-width: $body-min-width;
