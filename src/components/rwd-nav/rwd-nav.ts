@@ -64,7 +64,7 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 	};
 
 	public handleSwipe = () => {
-		let swiper = new Swipe('body');
+		let swiper = new Swipe('.nav');
 		swiper.onLeft(() => this.setState({ isMenuOpen: true }));
 		swiper.onRight(() => this.setState({ isMenuOpen: false }));
 		swiper.run();

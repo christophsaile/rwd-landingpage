@@ -4,25 +4,12 @@
 @include host("rwd-nav") {
 	.nav {
 		position: fixed;
-		height: 100%;
 		top: 0;
+		bottom: 0;
 		right: 0;
-		padding: 2rem 2rem 2rem 1rem;
-		background-color: lightcoral;
-		z-index: 10;
+		padding-right: 10rem;
 
-		@include breakpoint($medium) {
-			padding: 2rem 4rem 2rem 2rem;
-		}
-
-		&Items {
-			display: flex;
-			height: 100%;
-			width: 100%;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-
+		
 		&MenuOpen {
 			.navMenu__icon {
 				span {
@@ -73,9 +60,17 @@
 
 		&Menu {
 			&__icon {
-				position: relative;
+				position: fixed;
+				top: 0;
+				right: 0;
+				padding: 2rem 2rem 0 1rem;
 				line-height: 0;
 				z-index: 9;
+
+				@include breakpoint ($medium) {
+					padding: 2rem 4rem 0 2rem;
+				}
+
 				span {
 					display: block;
 					width: 3rem;
@@ -138,16 +133,15 @@
 		}
 
 		&Counter {
-			position: absolute;
+			position: fixed;
 			top: 0;
 			bottom: 0;
 			right: 0;
-			width: 100%;
+			padding: 0 2rem 0 1rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			padding: 0 2rem 0 1rem;
 			transition: right $transition-default;
 			z-index: 8;
 
@@ -202,6 +196,10 @@
 		}
 
 		&LearnMore {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			padding: 0 2rem 2rem 1rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -209,7 +207,7 @@
 			z-index: 8;
 
 			@include breakpoint($medium) {
-				right: 4rem;
+				padding: 0 4rem 2rem 2rem;
 			}
 
 			&__icon {
