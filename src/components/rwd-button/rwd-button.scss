@@ -11,6 +11,10 @@
         background-repeat: no-repeat;
         background-color: unset;
         
+        &:hover {
+            filter: grayscale(10%);
+        }
+        
         &__link {
             color: $white;
             
