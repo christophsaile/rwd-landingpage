@@ -3,8 +3,8 @@
 
 @include host("rwd-button") {
 	.button {
-        min-width: 20rem;
-        padding: 1rem 3rem;
+        min-height: 5rem;
+        min-width: 23rem;
         border: 0;
         background-image: url("../../_assets/button.png");
         background-size: cover;
@@ -14,8 +14,14 @@
         &:hover {
             filter: grayscale(10%);
         }
+
+        &:focus {
+            outline: none;
+        }
         
         &__link {
+            min-width: 20rem;
+            padding: 1rem 3rem;
             color: $white;
             
         }
