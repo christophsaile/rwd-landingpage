@@ -12,6 +12,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-color: unset;
+        text-transform: uppercase;
         
         &:hover {
             filter: grayscale(10%);
@@ -25,7 +26,6 @@
             min-width: 20rem;
             padding: 1rem 3rem;
             color: $white;
-            
         }
 	}
 }
