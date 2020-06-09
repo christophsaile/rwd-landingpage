@@ -22,10 +22,6 @@ p {
 	@include breakpoint($xxlarge) {
 		font-size: 2.5rem;
 	}
-
-	@include breakpoint($wide) {
-		font-size: 3.5rem;
-	}
 }
 
 /* Global list styles */
@@ -47,10 +43,6 @@ a {
 
 	@include breakpoint($xxlarge) {
 		font-size: 2.5rem;
-	}
-
-	@include breakpoint($wide) {
-		font-size: 3.5rem;
 	}
 
 	&:hover {

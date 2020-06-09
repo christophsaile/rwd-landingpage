@@ -8,8 +8,8 @@
 		bottom: 0;
 		right: 0;
 		padding-right: 10rem;
+		font-weight: 700;
 
-		
 		&MenuOpen {
 			.navMenu__icon {
 				span {
@@ -36,13 +36,16 @@
 				}
 			}
 
+			.navCounter__container {
+				&::before {
+					background-color: $white;
+				}
+			}
+
 			.navCounter__item {
 				&:last-child {
 					.navCounter__link {
 						color: $white;
-						&::before {
-							background-color: $white;
-						}
 					}
 				}
 			}
@@ -67,21 +70,24 @@
 				line-height: 0;
 				z-index: 9;
 
-				@include breakpoint ($medium) {
+				@include breakpoint($medium) {
 					padding: 2rem 4rem 0 2rem;
 				}
 
 				span {
 					display: block;
-					width: 3rem;
+					width: 2.5rem;
 					height: 0.2rem;
-					margin-top: 0.6rem;
 					background-color: $black;
 					transition: all 0.2s ease-in-out;
 
+					@include breakpoint($medium) {
+						width: 3rem;
+					}
+
 					&:first-child {
 						display: inline-block;
-						margin: 0;
+						margin-bottom: 0.7rem;
 					}
 				}
 			}
@@ -134,6 +140,7 @@
 
 		&Counter {
 			position: fixed;
+			width: 5.5rem;
 			top: 0;
 			bottom: 0;
 			right: 0;
@@ -146,34 +153,38 @@
 			z-index: 8;
 
 			@include breakpoint($medium) {
+				width: 9.0rem;
 				padding: 0 4rem 0 2rem;
+			}
+			&__container {
+				width: 2.5rem;
+				text-align: center;
+
+				@include breakpoint ($medium) {
+					width: 3rem;
+				}
+
+				&::before {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 1rem;
+					width: 2.5rem;
+					height: 0.2rem;
+					margin: auto;
+					content: "";
+					background-color: $black;
+
+					@include breakpoint($medium) {
+						width: 3rem;
+						left: 2rem;
+					}
+				}
 			}
 
 			&__item {
 				line-height: 1;
-				padding: 2rem 0;
-
-				&:last-child {
-					.navCounter__link {
-						&::before {
-							position: absolute;
-							bottom: 1.9rem;
-							left: 0;
-							height: 0.1rem;
-							width: 100%;
-							margin-bottom: 2.3rem;
-							content: "";
-							background-color: $black;
-						}
-
-						&.changeColor,
-						&.changeColorScroll {
-							&::before {
-								background-color: $white;
-							}
-						}
-					}
-				}
+				padding: 1.5rem 0;
 			}
 
 			&__link {
@@ -182,6 +193,10 @@
 				text-decoration: none;
 				font-size: 2rem;
 				line-height: 2.5rem;
+
+				@include breakpoint($medium) {
+					font-size: 2.5rem;
+				}
 
 				&.changeColor,
 				&.changeColorScroll {
@@ -213,6 +228,7 @@
 			&__icon {
 				fill: $black;
 				transition: all 0.2s ease-in-out;
+				stroke-width: 2rem;
 			}
 
 			&__text {
@@ -225,6 +241,10 @@
 				opacity: 0;
 				visibility: hidden;
 				transition: opacity 0.2s ease-in-out, height 0s, visibility 0s;
+
+				@include breakpoint($medium) {
+					font-size: 2.5rem;
+				}
 
 				&.showText {
 					height: auto;
