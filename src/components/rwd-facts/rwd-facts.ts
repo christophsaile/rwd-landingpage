@@ -25,14 +25,14 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
     let controller = new ScrollMagic.Controller();
 		let animateNumbers = new ScrollMagic.Scene({
 			triggerElement: "#facts",
-      triggerHook: 0.9,
+      triggerHook: 0.90,
       reverse: false
 		})
 			.on('start', () => {
         console.log('fired');
-        this.animateValue(".firstNumber", 0, 4800, 5000);
-        this.animateValue(".secondNumber", 0, 100, 5000);
-        this.animateValue(".thirdNumber", 0, 78, 5000);
+        this.animateValue(".firstNumber", 0, 4800, 3000);
+        this.animateValue(".secondNumber", 0, 100, 3000);
+        this.animateValue(".thirdNumber", 0, 78, 3000);
       })
       .addTo(controller);
       

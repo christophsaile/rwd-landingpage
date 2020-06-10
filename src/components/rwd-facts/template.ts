@@ -9,11 +9,11 @@ export const template = ( data: RwdFactsProps & RwdFactsState & RwdFactsMethods 
     <section class="facts">
       <div class="facts__container">
         <div class="facts__numbers">
-          <p><span class="facts__superNumber"><span class="firstNumber">4800</span></span> <br>
+          <p><span class="facts__superNumber"><span class="firstNumber">0</span></span> <br>
           <u>Weniger</u> Schadstoffe</p>
-          <p><span class="facts__superNumber"><span class="secondNumber">100</span>%</span> <br>
+          <p><span class="facts__superNumber"><span class="secondNumber">0</span>%</span> <br>
           Natürliche Aromen</p>
-          <p><span class="facts__superNumber"><span class="thirdNumber">78</span>%</span> <br>
+          <p><span class="facts__superNumber"><span class="thirdNumber">0</span>%</span> <br>
           Umweltfreundlicher</p>
         </div>
         <div class="facts__img">
