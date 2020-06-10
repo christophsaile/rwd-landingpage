@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 /* global settings */
-@import "settings/settings";
+@import "./settings/settings";
 
 /* functions */
-@import "utilities/functions";
+@import "./utilities/functions";
 
 /* fonts */
-@import "fonts/fonts";
+@import "./fonts/fonts";
 @import "../../../.iconfont/iconStyles";
 @import "../../../.iconfont/icons";
 
@@ -15,13 +15,13 @@
 @import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 /* layout */
-@import "layouts/default";
-@import "layouts/section";
-@import "layouts/grid";
+@import "./layouts/default";
+@import "./layouts/section";
+@import "./layouts/grid";
 
 /* base styles */
-@import "base/margins";
-@import "base/types";
+@import "./base/margins";
+@import "./base/types";
 
 /* global */
-@import "global";
+@import "./global";
