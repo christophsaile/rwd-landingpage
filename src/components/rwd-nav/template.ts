@@ -50,7 +50,7 @@ export const template = (
 						<a
 							ref=${refs.counterLastItemRef}
 							class="navCounter__link"
-							href="#section4"
+							href="#section6"
 							>04</a
 						>
 					</li>

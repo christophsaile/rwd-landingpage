@@ -29,14 +29,11 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
       reverse: false
 		})
 			.on('start', () => {
-        console.log('fired');
         this.animateValue(".firstNumber", 0, 4800, 3000);
         this.animateValue(".secondNumber", 0, 100, 3000);
         this.animateValue(".thirdNumber", 0, 78, 3000);
       })
       .addTo(controller);
-      
-      console.log(animateNumbers);
   }
 
 	public animateValue(
@@ -46,7 +43,6 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 		duration: number
 	) {
 		const obj = this.shadowRoot.querySelector(elem) as HTMLElement;
-		console.log(obj);
 		const range = end - start;
 
 		// no timer shorter than 50ms (not really visible any way)
