@@ -58,7 +58,7 @@ export const template = (
 			</section>
 			<section ref=${refs.learnMoreRef} class="navLearnMore">
 				<span ref=${refs.learnMoreTextRef} class="navLearnMore__text"
-					>Learn More</span
+					>Erfahre mehr</span
 				>
 				<span ref=${refs.learnMoreIconRef}>
 					<svg

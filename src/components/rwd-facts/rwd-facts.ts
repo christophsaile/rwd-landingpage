@@ -18,23 +18,23 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 	public methods: RwdFactsMethods = {};
 
 	ready() {
-    this.initScrollAnimation ();
+		this.initScrollAnimation();
 	}
 
-  public initScrollAnimation() {
-    let controller = new ScrollMagic.Controller();
+	public initScrollAnimation() {
+		let controller = new ScrollMagic.Controller();
 		let animateNumbers = new ScrollMagic.Scene({
 			triggerElement: "#facts",
-      triggerHook: 0.90,
-      reverse: false
+			triggerHook: 0.9,
+			reverse: false
 		})
-			.on('start', () => {
-        this.animateValue(".firstNumber", 0, 4800, 3000);
-        this.animateValue(".secondNumber", 0, 100, 3000);
-        this.animateValue(".thirdNumber", 0, 78, 3000);
-      })
-      .addTo(controller);
-  }
+			.on("start", () => {
+				this.animateValue(".firstNumber", 0, 4800, 3000);
+				this.animateValue(".secondNumber", 0, 100, 3000);
+				this.animateValue(".thirdNumber", 0, 78, 3000);
+			})
+			.addTo(controller);
+	}
 
 	public animateValue(
 		elem: string,
@@ -73,9 +73,7 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 	}
 
 	public render(): HTMLFragment {
-		return template(
-			{ ...this.props, ...this.state, ...this.methods }
-		);
+		return template({ ...this.props, ...this.state, ...this.methods });
 	}
 }
 
