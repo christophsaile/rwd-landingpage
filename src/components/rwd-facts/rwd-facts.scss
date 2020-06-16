@@ -5,7 +5,9 @@
 	.facts {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+        justify-content: center;
+        font-family: $font-family-compressed;
+        font-weight: 700;
 
 		&__container {
 			width: 100%;
@@ -13,8 +15,6 @@
 			flex-direction: column;
 			margin-bottom: 2rem;
 			text-align: center;
-			font-family: $font-family-compressed;
-			font-weight: 700;
 			text-transform: uppercase;
 
 			@include breakpoint($medium) {
@@ -58,10 +58,12 @@
 		}
 
 		&__info {
-			text-align: center;
+            text-align: center;
+            padding: 0 1rem;
 
 			p {
                 margin-bottom: 2rem;
+                font-size: 2.6rem;
 
 				span {
 					color: $red;
@@ -76,7 +78,7 @@
 
 
 			li {
-				font-size: 2rem;
+				font-size: 2.6rem;
 				width: 33.33%;
                 color: $green;
                 margin-bottom: 2rem;
