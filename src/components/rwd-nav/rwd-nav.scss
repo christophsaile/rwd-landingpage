@@ -72,7 +72,7 @@
 				z-index: 9;
 
 				@include breakpoint ($medium) {
-					padding: 2rem 2rem 0 1rem;
+					padding: 3rem 3rem 0 1rem;
 				}
 
 				span {
@@ -154,7 +154,8 @@
 			z-index: 8;
 
 			@include breakpoint($medium) {
-				width: 6.0rem;
+				padding: 0 3rem 0 1rem;
+				width: 7.0rem;
 			}
 
 			&__container {
@@ -222,7 +223,7 @@
 			z-index: 8;
 
 			@include breakpoint ($medium) {
-				padding: 2rem 2rem 0 1rem;
+				padding: 2rem 3rem 0 1rem;
 			}
 
 			&__icon {
