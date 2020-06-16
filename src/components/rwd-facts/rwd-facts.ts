@@ -29,7 +29,7 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 			reverse: false
 		})
 			.on("start", () => {
-				this.animateValue(".firstNumber", 0, 4800, 3000);
+				this.animateValue(".firstNumber", 4800, 0, 3000);
 				this.animateValue(".secondNumber", 0, 100, 3000);
 				this.animateValue(".thirdNumber", 0, 78, 3000);
 			})

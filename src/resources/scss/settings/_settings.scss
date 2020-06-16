@@ -6,7 +6,8 @@ $font-family-compressed: trade-gothic-next-compressed, sans-serif;
 $font-weight-normal:     400;
 
 // COLORS
-$white: #fffcf4;
+$white: #fff;
+$offWhite: #FFFCF4;
 $red: #ff2232;
 $green: #426A30;
 $yellow: #FFD300;
@@ -17,7 +18,7 @@ $grey: #7a7a7a;
 $transition-default: 0.3s cubic-bezier(1, 0.5, 0, 1);
 
 // BODY STYLES
-$body-bg: $white;
+$body-bg: $offWhite;
 $body-font-color: $black;
 $body-font-family: $font-family-condensed;
 $body-font-weight: $font-weight-normal;
