@@ -32,15 +32,6 @@ export const template = (
 						Umweltfreundlicher
 					</p>
 				</div>
-				<div class="facts__cigarette">
-					<img src="../../_assets/cigarette_pack_open.png" />
-					<rwd-button
-						link="#section2"
-						data-resources="[{paths: ['components/rwd-button/rwd-button.js']}]"
-					>
-						Zu unseren Produkten
-					</rwd-button>
-				</div>
 			</div>
 		</section>
 		${createStyle(styles)}

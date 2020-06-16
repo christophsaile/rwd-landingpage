@@ -1,15 +1,12 @@
 import Component, { HTMLFragment, createRef } from "@biotope/element";
 import { template } from "./template";
 import { RwdFactsProps, RwdFactsState, RwdFactsMethods } from "./interfaces";
-import { RwdButton } from "../rwd-button/rwd-button";
 import * as ScrollMagic from "scrollmagic";
 
 export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 	public static componentName = "rwd-facts";
 
 	public static attributes = [];
-
-	public static dependencies = [RwdButton as typeof Component];
 
 	protected readonly defaultProps: RwdFactsProps = {};
 
