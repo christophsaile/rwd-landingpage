@@ -11,7 +11,6 @@
 			font-family: $font-family-compressed;
 			font-weight: 700;
 			text-transform: uppercase;
-			color: $white;
 
 			@include breakpoint($medium) {
 				flex-direction: row-reverse;
