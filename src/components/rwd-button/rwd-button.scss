@@ -4,7 +4,6 @@
 @include host("rwd-button") {
 	.button {
         display: block;
-        margin: auto;
         min-height: 5rem;
         min-width: 23rem;
         font-family: $font-family-compressed;
