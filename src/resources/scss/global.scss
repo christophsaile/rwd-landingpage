@@ -105,7 +105,7 @@
 				max-height: none;
 			}
 
-			@include breakpoint($xxlarge) {
+			@include breakpoint($xlarge) {
 				max-width: none;
 				height: 100%;
 			}
