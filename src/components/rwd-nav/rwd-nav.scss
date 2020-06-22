@@ -199,14 +199,13 @@
 					font-size: 2.5rem;
 				}
 
-				&.changeColor,
-				&.changeColorScroll {
-					color: $white;
-				}
-
 				&--active {
 					color: $green;
 					transition: all $transition-default;
+				}
+
+				&--red {
+					color: $red;
 				}
 			}
 		}
