@@ -100,7 +100,7 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 
 		let productScene = new ScrollMagic.Scene({
 			triggerElement: "#products",
-			duration: '100%',
+			duration: "100%"
 		})
 		.setClassToggle(this.refs.counterFirstItemRef.current, 'navCounter__link--red')
 		.addTo(controller)

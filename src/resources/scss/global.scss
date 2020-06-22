@@ -100,7 +100,7 @@
 				max-width: 365px;
 			}
 
-			@include breakpoint ($large) {
+			@include breakpoint($large) {
 				max-width: 100%;
 				max-height: none;
 			}
@@ -121,11 +121,19 @@
 	max-width: $xxlarge;
 	margin: auto;
 
-	@include breakpoint ($large) {
+	@include breakpoint($large) {
 		padding: 0 7rem;
 	}
 
-	@include breakpoint ($wide) {
+	@include breakpoint($wide) {
 		padding: 0 2rem;
+	}
+}
+
+.products {
+	padding: 0;
+	
+	@include breakpoint($large) {
+		padding: 2rem;
 	}
 }
