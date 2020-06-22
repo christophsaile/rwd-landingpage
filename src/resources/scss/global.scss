@@ -1,6 +1,9 @@
 @import "settings/settings";
 @import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
+body {
+	cursor: none;
+}
 .fullpage {
 	height: 100vh;
 	padding: 0 1rem;
