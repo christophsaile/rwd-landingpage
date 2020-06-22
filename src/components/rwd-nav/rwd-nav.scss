@@ -71,7 +71,7 @@
 				line-height: 0;
 				z-index: 9;
 
-				@include breakpoint ($medium) {
+				@include breakpoint ($xxlarge) {
 					padding: 3rem 3rem 0 1rem;
 				}
 
@@ -82,7 +82,7 @@
 					background-color: $black;
 					transition: all 0.2s ease-in-out;
 
-					@include breakpoint($medium) {
+					@include breakpoint($xxlarge) {
 						width: 3rem;
 					}
 
@@ -126,7 +126,7 @@
 					font-size: 5.5rem;
 					transition: color 0.2s ease-in-out, opacity 0.4s ease-in-out;
 
-					@include breakpoint($medium) {
+					@include breakpoint($xxlarge) {
 						font-size: 6.5rem;
 					}
 
@@ -153,7 +153,7 @@
 			transition: right $transition-default;
 			z-index: 8;
 
-			@include breakpoint($medium) {
+			@include breakpoint($xxlarge) {
 				padding: 0 3rem 0 1rem;
 				width: 7.0rem;
 			}
@@ -162,7 +162,7 @@
 				width: 2.5rem;
 				text-align: center;
 
-				@include breakpoint ($medium) {
+				@include breakpoint ($xxlarge) {
 					width: 3rem;
 				}
 
@@ -177,7 +177,7 @@
 					content: "";
 					background-color: $black;
 
-					@include breakpoint($medium) {
+					@include breakpoint($xxlarge) {
 						width: 3rem;
 					}
 				}
@@ -195,7 +195,7 @@
 				font-size: 2rem;
 				line-height: 2.5rem;
 
-				@include breakpoint($medium) {
+				@include breakpoint($xxlarge) {
 					font-size: 2.5rem;
 				}
 
@@ -222,7 +222,7 @@
 			transition: all $transition-default;
 			z-index: 8;
 
-			@include breakpoint ($medium) {
+			@include breakpoint ($xxlarge) {
 				padding: 2rem 3rem 0 1rem;
 			}
 
@@ -243,7 +243,7 @@
 				visibility: hidden;
 				transition: opacity 0.2s ease-in-out, height 0s, visibility 0s;
 
-				@include breakpoint($medium) {
+				@include breakpoint($xxlarge) {
 					font-size: 2.5rem;
 				}
 

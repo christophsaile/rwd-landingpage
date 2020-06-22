@@ -9,26 +9,18 @@
         font-family: $font-family-compressed;
         font-weight: 700;
 
-		&__container {
+		&__numbers {
 			width: 100%;
 			display: flex;
 			flex-direction: column;
+			margin: auto;
 			margin-bottom: 2rem;
 			text-align: center;
 			text-transform: uppercase;
 
-			@include breakpoint($medium) {
-				flex-direction: row-reverse;
-			}
-		}
-
-		&__numbers {
-			width: 100%;
-			margin-bottom: 2rem;
-			margin: auto;
-
-			@include breakpoint($medium) {
-				width: 50%;
+			@include breakpoint($large) {
+				flex-direction: row;
+				justify-content: space-between;
 				margin-bottom: 0;
 			}
 
@@ -48,6 +40,16 @@
 
 			@include breakpoint($medium) {
 				font-size: 15rem;
+			}
+		}
+
+		&__container {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+
+			@include breakpoint ($large) {
+				flex-direction: row;
 			}
 		}
 
