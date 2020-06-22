@@ -6,7 +6,10 @@ import { RwdProductsProps, RwdProductsState, RwdProductsMethods } from './interf
 
 export const template = ( data: RwdProductsProps & RwdProductsState & RwdProductsMethods ): HTMLFragment => {
   return html`
-    <slot/>
+    <section class="products">
+      <div class="products__container">
+      </div>
+    </section>
     ${createStyle(styles)}
   `;
 }
