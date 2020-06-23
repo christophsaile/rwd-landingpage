@@ -9,7 +9,34 @@ h2,
 h3,
 h4 {
 	margin: 0;
+	text-transform: uppercase;
+	font-family: $font-family-compressed;
 	font-weight: 700;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 5.2rem;
+
+	@include breakpoint ($xxlarge) {
+		font-size: 8rem;
+	}
+
+	@include breakpoint ($wide) {
+		font-size: 10rem;
+	}
+}
+
+h3 {
+	font-size: 2.6rem;
+
+	@include breakpoint ($xxlarge) {
+		font-size: 4rem;
+	}
+
+	@include breakpoint ($wide) {
+		font-size: 5rem;
+	}
 }
 
 /* Global paragraph styles */
