@@ -23,16 +23,22 @@ export const template = (
 				<div ref=${refs.menuItemsRef} class="navMenu__items">
 					<ul>
 						<li class="navMenu__link">
-							<a href="#"><span>Section 1</span></a>
+							<a href="#"><span>Home</span></a>
 						</li>
 						<li class="navMenu__link">
-							<a href="#section2"><span>Section 2</span></a>
+							<a href="#facts"><span>Facts</span></a>
 						</li>
 						<li class="navMenu__link">
-							<a href="#section3"><span>Section 3</span></a>
+							<a href="#products"><span>Products</span></a>
 						</li>
 						<li class="navMenu__link">
-							<a href="#section4"><span>Section 4</span></a>
+							<a href="#recycle"><span>Recycle</span></a>
+						</li>
+						<li class="navMenu__link">
+							<a href="#production"><span>Production</span></a>
+						</li>
+						<li class="navMenu__link">
+							<a href="#philosophy"><span>Philosophy</span></a>
 						</li>
 					</ul>
 				</div>
@@ -50,7 +56,7 @@ export const template = (
 						<a
 							ref=${refs.counterLastItemRef}
 							class="navCounter__link"
-							href="#section6"
+							href="#philosophy"
 							>04</a
 						>
 					</li>
