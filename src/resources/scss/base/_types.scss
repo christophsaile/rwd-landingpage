@@ -16,6 +16,7 @@ h4 {
 }
 
 h2 {
+	color: $green;
 	font-size: 5.2rem;
 
 	@include breakpoint ($xxlarge) {
