@@ -1,6 +1,86 @@
 @import "node_modules/@biotope/element/lib/host.mixin";
 @import "../../resources/scss/defaultSassImports.scss";
 
-@include host('rwd-footer') {
+@include host("rwd-footer") {
+	.footer {
+		background-color: $green;
+		color: $offWhite;
 
+		&__container {
+			display: flex;
+			flex-direction: column;
+			max-width: $xxlarge;
+			margin: auto;
+            padding: 3rem 1rem;
+            font-family: $font-family-compressed;
+            text-transform: uppercase;
+
+			@include breakpoint($large) {
+                flex-direction: row-reverse;
+                padding: 7.5rem 1rem 5rem;
+			}
+		}
+
+		&__follow {
+			margin-bottom: 2rem;
+
+			@include breakpoint($large) {
+				width: 50%;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+
+			a {
+				margin-right: 1rem;
+			}
+
+			svg {
+				fill: $offWhite;
+				width: 50px;
+				height: auto;
+				transition: all 0.2s ease-in-out;
+
+				&:hover {
+					fill: $red;
+				}
+			}
+		}
+
+		&__nav {
+			@include breakpoint($large) {
+				width: 50%;
+			}
+
+			li {
+				position: relative;
+				font-size: 2rem;
+				padding-left: 2rem;
+				line-height: 1;
+                margin-bottom: 0.5rem;
+                transition: all 0.2s ease-in-out;
+                
+                @include breakpoint ($xxlarge) {
+                    font-size: 2.6rem;
+                }
+
+				&::before {
+					content: "";
+					position: absolute;
+					border-right: 2px solid $red;
+					border-bottom: 2px solid $red;
+					width: 10px;
+					height: 10px;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%) rotate(-45deg);
+                }
+                
+                &:hover {
+                    margin-left: 1rem;
+                }
+			}
+		}
+	}
 }

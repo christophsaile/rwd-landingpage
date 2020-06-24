@@ -19,9 +19,14 @@
 		}
 
 		h2 {
+			text-align: center;
 			grid-column: 1;
 			grid-row: 1;
 			margin-bottom: 2rem;
+
+			@include breakpoint ($large) {
+				text-align: left;
+			}
 		}
 
 		picture {
