@@ -1,0 +1,31 @@
+@import "node_modules/@biotope/element/lib/host.mixin";
+@import "../../resources/scss/defaultSassImports.scss";
+
+@include host("rwd-production") {
+	.production {
+        max-width: $xxlarge;
+        text-align: center;
+        
+        @include breakpoint ($large) {
+            width: 66.66%;
+            margin: auto;
+        }
+
+		h2,
+		h3 {
+			color: $green;
+		}
+
+		h2 {
+			margin-bottom: 2rem;
+		}
+
+		h3 {
+			margin-bottom: 1rem;
+		}
+
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+}

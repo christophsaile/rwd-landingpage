@@ -155,3 +155,18 @@ body {
 		padding: 0 2rem;
 	}
 }
+
+.production {
+	display: flex;
+	background-image: url(../../_assets/paper_background_mobile.jpg);
+	background-position: center;
+	background-size: cover;
+
+	@include breakpoint($large) {
+		background-image: url(../../_assets/paper_background.jpg);
+	}
+
+	rwd-production {
+		margin: auto;
+	}
+}
