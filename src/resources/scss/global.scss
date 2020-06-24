@@ -142,6 +142,16 @@ body {
 }
 
 .recycle {
+	display: flex;
+	align-items: center;
 	max-width: $xxlarge;
 	margin: auto;
+
+	@include breakpoint($large) {
+		padding: 0 7rem;
+	}
+
+	@include breakpoint($wide) {
+		padding: 0 2rem;
+	}
 }
