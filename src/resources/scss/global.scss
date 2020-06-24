@@ -172,9 +172,17 @@ body {
 }
 
 .philosophy {
-	
+	display: flex;
+	height: auto;
+	margin: auto;
+	max-width: $xxlarge;
+
+	@include breakpoint ($large) {
+		height: 70vh;
+		align-items: center;
+	}
 }
 
 .footer {
-	
+
 }
