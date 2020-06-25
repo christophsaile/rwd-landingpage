@@ -3,7 +3,7 @@
 
 @include host("rwd-philosophy") {
 	.philosophy {
-		margin-top: 2rem;
+		padding: 6rem 0;
 
 		@include breakpoint($large) {
 			margin-top: 0;
@@ -22,7 +22,7 @@
 			text-align: center;
 			grid-column: 1;
 			grid-row: 1;
-			margin-bottom: 2rem;
+			margin-bottom: 5rem;
 
 			@include breakpoint ($large) {
 				text-align: left;
@@ -30,6 +30,8 @@
 		}
 
 		picture {
+			margin-bottom: 1rem;
+			
 			@include breakpoint($large) {
 				grid-column: 2;
 				grid-row: 1 / span 2;
@@ -38,7 +40,6 @@
 
 		img {
 			width: 100%;
-			margin-bottom: 1rem;
 
 			@include breakpoint($large) {
 				margin: 0;

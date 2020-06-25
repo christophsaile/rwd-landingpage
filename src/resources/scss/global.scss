@@ -6,10 +6,10 @@ body {
 }
 .fullpage {
 	height: 100vh;
-	padding: 0 1rem;
+	padding: 0 2rem;
 
 	@include breakpoint($xxlarge) {
-		padding: 0 2rem;
+		padding: 0 4rem;
 	}
 
 	&--mobile {
@@ -143,12 +143,11 @@ body {
 
 .recycle {
 	display: flex;
-	align-items: center;
 	max-width: $xxlarge;
-	margin: auto;
 
 	@include breakpoint($large) {
 		padding: 0 7rem;
+		align-items: center;
 	}
 
 	@include breakpoint($wide) {
