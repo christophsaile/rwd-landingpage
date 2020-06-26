@@ -148,6 +148,7 @@ body {
 	@include breakpoint($medium) {
 		padding: 0 7rem;
 		align-items: center;
+		margin: auto;
 	}
 
 	@include breakpoint($wide) {
@@ -185,8 +186,9 @@ body {
 	}
 
 	@include breakpoint ($large) {
-		height: 70vh;
+		min-height: 70vh;
 		align-items: center;
+		padding: 6rem 7rem;
 	}
 }
 
