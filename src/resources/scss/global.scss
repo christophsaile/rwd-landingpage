@@ -8,8 +8,8 @@ body {
 	height: 100vh;
 	padding: 0 2rem;
 
-	@include breakpoint($xxlarge) {
-		padding: 0 4rem;
+	@include breakpoint($medium) {
+		padding: 0 2rem;
 	}
 
 	&--mobile {
@@ -124,7 +124,7 @@ body {
 	max-width: $xxlarge;
 	margin: auto;
 
-	@include breakpoint($large) {
+	@include breakpoint($medium) {
 		padding: 0 7rem;
 	}
 
@@ -145,7 +145,7 @@ body {
 	display: flex;
 	max-width: $xxlarge;
 
-	@include breakpoint($large) {
+	@include breakpoint($medium) {
 		padding: 0 7rem;
 		align-items: center;
 	}
@@ -161,6 +161,10 @@ body {
 	background-position: center;
 	background-size: cover;
 
+	@include breakpoint($medium) {
+		padding: 0 7rem;
+	}
+
 	@include breakpoint($large) {
 		background-image: url(../../_assets/paper_background.jpg);
 	}
@@ -175,6 +179,10 @@ body {
 	height: auto;
 	margin: auto;
 	max-width: $xxlarge;
+
+	@include breakpoint ($medium) {
+		padding: 0 7rem;
+	}
 
 	@include breakpoint ($large) {
 		height: 70vh;

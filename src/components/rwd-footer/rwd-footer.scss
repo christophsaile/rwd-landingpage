@@ -15,9 +15,11 @@
             font-family: $font-family-compressed;
             text-transform: uppercase;
 
+			@include breakpoint($medium) {
+                padding: 7.5rem 7rem 5rem;
+			}
 			@include breakpoint($large) {
                 flex-direction: row-reverse;
-                padding: 7.5rem 1rem 5rem;
 			}
 		}
 
