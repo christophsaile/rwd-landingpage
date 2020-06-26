@@ -85,6 +85,7 @@
 				a {
 					font-size: 3rem;
 					color: $offWhite;
+					text-decoration: underline;
 
 					@include breakpoint ($xxlarge) {
 						font-size: 4rem;
