@@ -233,7 +233,7 @@
 			z-index: 8;
 
 			@include breakpoint ($xxlarge) {
-				padding: 2rem 3rem 0 1rem;
+				padding: 2rem 3rem 2rem 1rem;
 			}
 
 			&__icon {
@@ -259,6 +259,7 @@
 
 				@include breakpoint($xxlarge) {
 					font-size: 2.5rem;
+					padding-left: 0.5rem;
 				}
 
 				&.showText {
