@@ -42,7 +42,8 @@
             margin-bottom: 2rem;
 
 			@include breakpoint($large) {
-				flex-direction: row;
+                flex-direction: row;
+                width: 100%;
             }
 
             @include breakpoint ($xxlarge) {
