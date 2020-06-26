@@ -1,14 +1,14 @@
-import { html, createStyle, HTMLFragment } from '@biotope/element';
-import * as styles from './rwd-nav.scss';
-import cn from 'classnames';
+import { html, createStyle, HTMLFragment } from "@biotope/element";
+import * as styles from "./rwd-nav.scss";
+import cn from "classnames";
 
-import { RwdNavProps, RwdNavState, RwdNavMethods } from './interfaces';
+import { RwdNavProps, RwdNavState, RwdNavMethods } from "./interfaces";
 
 export const template = (
 	data: RwdNavProps & RwdNavState & RwdNavMethods,
 	refs: any
 ): HTMLFragment => {
-	const navStates = cn('nav', {
+	const navStates = cn("nav", {
 		navMenuOpen: data.isMenuOpen
 	});
 
@@ -64,22 +64,10 @@ export const template = (
 			</section>
 			<section ref=${refs.learnMoreRef} class="navLearnMore">
 				<span ref=${refs.learnMoreTextRef} class="navLearnMore__text"
-					>Erfahre mehr</span
+					>mehr erfahren</span
 				>
 				<span ref=${refs.learnMoreIconRef}>
-					<svg
-						class="navLearnMore__icon"
-						width="24"
-						height="24"
-						xmlns="http://www.w3.org/2000/svg"
-						fill-rule="evenodd"
-						clip-rule="evenodd"
-					>
-						<path
-							d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"
-						/>
-					</svg>
-				</span>
+				<svg class="navLearnMore__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 14"><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><polygon points="27.12 0 14 12.58 0.91 0 0 0.54 14 14 28 0.53 27.12 0 27.12 0"/></g></g></svg>				</span>
 			</section>
 		</nav>
 	`;

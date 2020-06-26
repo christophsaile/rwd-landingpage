@@ -29,7 +29,7 @@
 
 		&__item {
 			width: 50%;
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
 
 			@include breakpoint($large) {
 				width: 20%;
