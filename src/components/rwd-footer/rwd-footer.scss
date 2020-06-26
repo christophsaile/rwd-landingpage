@@ -61,15 +61,10 @@
 
 			li {
 				position: relative;
-				font-size: 2rem;
 				padding-left: 2rem;
 				line-height: 1;
                 margin-bottom: 3rem;
                 transition: all 0.2s ease-in-out;
-                
-                @include breakpoint ($xxlarge) {
-                    font-size: 4rem;
-                }
 
 				&::before {
 					content: "";
@@ -85,7 +80,16 @@
                 
                 &:hover {
                     margin-left: 1rem;
-                }
+				}
+				
+				a {
+					font-size: 3rem;
+					color: $offWhite;
+
+					@include breakpoint ($xxlarge) {
+						font-size: 4rem;
+					}
+				}
 			}
 		}
 	}

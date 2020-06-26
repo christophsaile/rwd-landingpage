@@ -17,11 +17,11 @@ export const template = ( data: RwdFooterProps & RwdFooterState & RwdFooterMetho
         </div>
         <nav class="footer__nav">
           <ul>
-            <li><a href="#products"></a>Jetzt Kaufen</li>
-            <li><a href="#production"></a>Herstellung</li>
-            <li><a href="#recycle"></a>Nachhaltigkeit</li>
-            <li><a href="#philosophy"></a>Unsere Philosophie</li>
-            <li><a href=""></a>Newsletter</li>
+            <li><a href="#products">Jetzt Kaufen</a></li>
+            <li><a href="#production">Herstellung</a></li>
+            <li><a href="#recycle">Nachhaltigkeit</a></li>
+            <li><a href="#philosophy">Unsere Philosophie</a></li>
+            <li><a href="">Newsletter</a></li>
           </ul>
         </nav>
       </div>
