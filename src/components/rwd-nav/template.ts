@@ -23,22 +23,16 @@ export const template = (
 				<div ref=${refs.menuItemsRef} class="navMenu__items">
 					<ul>
 						<li class="navMenu__link">
-							<a href="#"><span>Home</span></a>
+							<a href="#products"><span>Jetzt kaufen</span></a>
 						</li>
 						<li class="navMenu__link">
-							<a href="#facts"><span>Facts</span></a>
+							<a href="#recycle"><span>Nachhaltigkeit</span></a>
 						</li>
 						<li class="navMenu__link">
-							<a href="#products"><span>Products</span></a>
+							<a href="#production"><span>Herstellung</span></a>
 						</li>
 						<li class="navMenu__link">
-							<a href="#recycle"><span>Recycle</span></a>
-						</li>
-						<li class="navMenu__link">
-							<a href="#production"><span>Production</span></a>
-						</li>
-						<li class="navMenu__link">
-							<a href="#philosophy"><span>Philosophy</span></a>
+							<a href="#philosophy"><span>Unsere Philosophie</span></a>
 						</li>
 					</ul>
 				</div>
