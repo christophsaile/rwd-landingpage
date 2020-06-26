@@ -40,12 +40,16 @@
 
 			svg {
 				fill: $offWhite;
-				width: 40px;
+				width: 4rem;
 				height: auto;
 				transition: all 0.2s ease-in-out;
 
 				&:hover {
 					fill: $red;
+				}
+
+				@include breakpoint ($xxlarge) {
+					width: 5rem;
 				}
 			}
 		}
@@ -60,11 +64,11 @@
 				font-size: 2rem;
 				padding-left: 2rem;
 				line-height: 1;
-                margin-bottom: 0.5rem;
+                margin-bottom: 3rem;
                 transition: all 0.2s ease-in-out;
                 
                 @include breakpoint ($xxlarge) {
-                    font-size: 2.6rem;
+                    font-size: 4rem;
                 }
 
 				&::before {

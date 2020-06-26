@@ -67,7 +67,8 @@ export class RwdCursor extends Component<RwdCursorProps, RwdCursorState> {
 					};
 
 					paper.setup(canvas);
-					const strokeColor: any = "#426A30";
+					const strokeColor: any = "#ff2232";
+					const fill: any = "#FFFCF4"
 					const strokeWidth = 1;
 					const segments = 8;
 					const radius = 15;
@@ -85,6 +86,8 @@ export class RwdCursor extends Component<RwdCursorProps, RwdCursorState> {
 					);
 					polygon.strokeColor = strokeColor;
 					polygon.strokeWidth = strokeWidth;
+					polygon.fillColor = fill;
+					polygon.opacity = 0.5;
 					polygon.smooth();
 					group = new paper.Group([polygon]);
 					group.applyMatrix = false;
