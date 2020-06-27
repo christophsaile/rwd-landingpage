@@ -118,6 +118,55 @@ body {
 			margin: auto;
 		}
 	}
+
+	&__textLoop {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		height: 3rem;
+		width: 100%;
+		left: 0;
+		overflow-x: hidden;
+		z-index: -1;
+
+		@include breakpoint($large) {
+			bottom: 0;
+			height: 15%;
+		}
+	}
+
+	&__textLoopContent {
+		font-size: 3rem;
+		line-height: 1;
+		font-family: $font-family-compressed;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $green;
+
+		@include breakpoint($large) {
+			font-size: 4rem;
+		}
+
+		@include breakpoint($xxlarge) {
+			font-size: 5rem;
+		}
+	}
+
+	&__track {
+		position: absolute;
+		white-space: nowrap;
+		will-change: transform;
+		animation: marquee 32s linear infinite;
+	}
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
 }
 
 .facts {
@@ -135,7 +184,7 @@ body {
 
 .products {
 	padding: 0;
-	
+
 	@include breakpoint($large) {
 		padding: 2rem;
 	}
@@ -181,11 +230,11 @@ body {
 	margin: auto;
 	max-width: $xxlarge;
 
-	@include breakpoint ($medium) {
+	@include breakpoint($medium) {
 		padding: 0 7rem;
 	}
 
-	@include breakpoint ($large) {
+	@include breakpoint($large) {
 		min-height: 70vh;
 		align-items: center;
 		padding: 6rem 7rem;
