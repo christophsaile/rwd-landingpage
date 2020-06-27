@@ -20,5 +20,10 @@ module.exports = {
 	},
 	webpack: {
 		watchScss: true
+	},
+	favicons: {
+		appName: "L&S-cigarettes",
+		path: '/favicons/',
+		background: '#FFFCF4'
 	}
 };
