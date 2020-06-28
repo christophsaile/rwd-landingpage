@@ -84,6 +84,7 @@ body {
 		align-items: center;
 		grid-row: 2;
 		margin-bottom: 2rem;
+		z-index: 3;
 
 		@include breakpoint($large) {
 			grid-column: 3;
@@ -243,4 +244,11 @@ body {
 
 footer {
 	padding-top: 10rem;
+}
+
+.cut {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	z-index: 2;
 }
