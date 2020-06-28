@@ -28,6 +28,7 @@ body {
 
 .intro {
 	padding: 1rem 1rem 0;
+	position: relative;
 
 	@include breakpoint($xxlarge) {
 		padding: 2rem 2rem 0;
@@ -128,11 +129,13 @@ body {
 		width: 100%;
 		left: 0;
 		overflow-x: hidden;
-		z-index: -1;
+		z-index: 4;
+
 
 		@include breakpoint($large) {
 			bottom: 0;
 			height: 15%;
+			z-index: -1;
 		}
 	}
 
@@ -166,6 +169,28 @@ body {
 		}
 		to {
 			transform: translateX(-50%);
+		}
+	}
+
+	&__cut {
+		position: absolute;
+		right: 0;
+		top: 61%;
+		z-index: 2;
+		height: 80%;
+		max-height: 600px;
+
+		@include breakpoint ($large) {
+			top: 50%;
+		}
+
+		@include breakpoint ($wide) {
+			max-height: none;
+			height: auto;
+		}
+
+		@include breakpoint ($ultraWide) {
+			height: 70%;
 		}
 	}
 }
@@ -244,11 +269,4 @@ body {
 
 footer {
 	padding-top: 10rem;
-}
-
-.cut {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	z-index: 2;
 }
