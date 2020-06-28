@@ -52,6 +52,7 @@ body {
 		max-width: $xxlarge;
 		margin: auto;
 		grid-template-columns: 100%;
+		grid-template-rows: 1fr auto;
 
 		@include breakpoint($large) {
 			grid-template-columns: 1fr 1fr 1fr;
@@ -88,7 +89,7 @@ body {
 		z-index: -1;
 		left: -25%;
 		top: 3rem;
-		
+
 		@include breakpoint($large) {
 			top: -15%;
 		}
@@ -109,7 +110,12 @@ body {
 			margin-bottom: 0;
 		}
 		picture {
-			height: 100%;
+			@include breakpoint($large) {
+				display: flex;
+				align-items: center;
+				height: 100%;
+				max-width: 450px;
+			}
 		}
 
 		img {
@@ -123,6 +129,7 @@ body {
 			@include breakpoint($large) {
 				max-width: 100%;
 				max-height: none;
+				margin: auto;
 			}
 
 			@include breakpoint($xlarge) {
