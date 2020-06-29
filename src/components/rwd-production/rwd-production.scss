@@ -18,20 +18,36 @@
 			background-size: 120%;
 			background-position: center;
 
+			@include breakpoint ($medium) {
+				background-size: contain;
+			}
+
 			@include breakpoint ($large) {
+				width: 330px;
+				margin: auto;
 				top: -6rem;
 				right: 0;
 				left: 0;
-				width: 380px;
+			}
+
+			@include breakpoint ($xxlarge) {
+				top: -8rem;
 			}
 
 			@include breakpoint ($wide) {
-
+				width: auto;
+				top: -12rem;
+				padding: 6rem 6rem 7rem;
 			}
 
 			h3 {
 				color: $red;
 				margin-bottom: 2rem;
+				font-size: 3rem;
+
+				@include breakpoint ($wide) {
+					font-size: 5rem;
+				}
 			}
 
 			a {
@@ -52,7 +68,11 @@
 					filter: grayscale(10%);
 				}
 
-				@include breakpoint ($xxlarge) {
+				@include breakpoint ($medium) {
+					width: 3rem;
+				}
+
+				@include breakpoint ($wide) {
 					width: 5rem;
 				}
 			}
