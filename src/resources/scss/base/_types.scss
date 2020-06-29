@@ -67,7 +67,10 @@ a {
 	color: $black;
 	text-decoration: none;
 	transition: all 0.2s;
-	cursor: none;
+
+	@include breakpoint($medium) {
+		cursor: none;
+	}
 
 	@include breakpoint($xxlarge) {
 		font-size: 2.6rem;

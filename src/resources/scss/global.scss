@@ -2,7 +2,9 @@
 @import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 body {
-	cursor: none;
+	@include breakpoint ($medium) {
+		cursor: none;
+	}
 }
 .fullpage {
 	height: 100vh;
