@@ -111,6 +111,11 @@
 		p {
 			margin-bottom: 2rem;
 			color: $white;
+			text-shadow: 0 0 0.3rem $black;
+
+			@include breakpoint ($medium) {
+				text-shadow: unset;
+			}
 
 			&:last-child {
 				margin-bottom: 0;
