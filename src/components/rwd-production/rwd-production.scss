@@ -2,12 +2,70 @@
 @import "../../resources/scss/defaultSassImports.scss";
 
 @include host("rwd-production") {
+
+	.social {
+		&__links {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			top: -4rem;
+			left: 0;
+			padding: 4rem 0 5rem;
+			background-image: url(../../_assets/paper_cut_social.png);
+			background-repeat: no-repeat;
+			background-size: 120%;
+			background-position: center;
+
+			@include breakpoint ($large) {
+				top: -6rem;
+				right: 0;
+				left: 0;
+				width: 380px;
+			}
+
+			@include breakpoint ($wide) {
+
+			}
+
+			h3 {
+				color: $red;
+				margin-bottom: 2rem;
+			}
+
+			a {
+				margin-right: 1.5rem;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+
+			svg {
+				fill: $red;
+				width: 4rem;
+				height: auto;
+				transition: all 0.2s ease-in-out;
+
+				&:hover {
+					filter: grayscale(10%);
+				}
+
+				@include breakpoint ($xxlarge) {
+					width: 5rem;
+				}
+			}
+		}
+	}
+
 	.production {
 		max-width: $xxlarge;
-		padding: 6rem 0;
+		padding: 15rem 0 6rem;
         text-align: center;
         
         @include breakpoint ($large) {
+			padding: 6rem 0;
             width: 66.66%;
             margin: auto;
         }
