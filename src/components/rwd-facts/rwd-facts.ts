@@ -20,6 +20,7 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 	}
 
 	public initScrollAnimation() {
+		const flower = this.shadowRoot.querySelector('.facts__flower');
 		let controller = new ScrollMagic.Controller();
 		let animateNumbers = new ScrollMagic.Scene({
 			triggerElement: "#facts",
@@ -32,6 +33,13 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 				counter(this.shadowRoot.querySelector('.thirdNumber'), 0, 78, 3000);
 			})
 			.addTo(controller);
+
+		let animateFlower = new ScrollMagic.Scene({
+			triggerElement: flower,
+			triggerHook: "onEnter",
+		})
+		.setClassToggle(flower, "animate__fadeInLeft")
+		.addTo(controller);
 	}
 
 	public render(): HTMLFragment {

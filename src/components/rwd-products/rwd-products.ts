@@ -26,12 +26,10 @@ export class RwdProducts extends Component< RwdProductsProps, RwdProductsState >
   private initScrollAnimation = () => {
     const images = this.shadowRoot.querySelectorAll('img');
     const animationTrigger = this.shadowRoot.querySelector('.products__container')
-    console.log (images);
-
 
     let controller = new ScrollMagic.Controller();
     let scene = new ScrollMagic.Scene({
-      triggerElement: animationTrigger,
+      triggerElement: images,
       triggerHook: "onEnter",
     })
     .on('enter', () => {
