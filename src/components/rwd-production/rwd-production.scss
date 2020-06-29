@@ -3,8 +3,7 @@
 @import "../../resources/scss/animation/animate.css";
 
 @include host("rwd-production") {
-
-	.social {	
+	.social {
 		&__scrollTrigger {
 			position: absolute;
 			top: -15vh;
@@ -27,11 +26,11 @@
 			background-size: 120%;
 			background-position: center;
 
-			@include breakpoint ($medium) {
+			@include breakpoint($medium) {
 				background-size: contain;
 			}
 
-			@include breakpoint ($large) {
+			@include breakpoint($large) {
 				width: 330px;
 				margin: auto;
 				top: -6rem;
@@ -39,11 +38,11 @@
 				left: 0;
 			}
 
-			@include breakpoint ($xxlarge) {
+			@include breakpoint($xxlarge) {
 				top: -8rem;
 			}
 
-			@include breakpoint ($wide) {
+			@include breakpoint($wide) {
 				width: auto;
 				top: -12rem;
 				padding: 6rem 6rem 7rem;
@@ -54,7 +53,7 @@
 				margin-bottom: 2rem;
 				font-size: 3rem;
 
-				@include breakpoint ($wide) {
+				@include breakpoint($wide) {
 					font-size: 5rem;
 				}
 			}
@@ -77,11 +76,11 @@
 					filter: grayscale(10%);
 				}
 
-				@include breakpoint ($medium) {
+				@include breakpoint($medium) {
 					width: 3rem;
 				}
 
-				@include breakpoint ($wide) {
+				@include breakpoint($wide) {
 					width: 5rem;
 				}
 			}
@@ -90,14 +89,16 @@
 
 	.production {
 		max-width: $xxlarge;
+		position: relative;
 		padding: 15rem 0 6rem;
-        text-align: center;
-        
-        @include breakpoint ($large) {
+		text-align: center;
+		z-index: 3;
+
+		@include breakpoint($large) {
 			padding: 6rem 0;
-            width: 66.66%;
-            margin: auto;
-        }
+			width: 66.66%;
+			margin: auto;
+		}
 
 		h2 {
 			margin-bottom: 5rem;
@@ -114,6 +115,74 @@
 
 			&:last-child {
 				margin-bottom: 0;
+			}
+		}
+
+		&__flowers {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			overflow: hidden;
+
+			svg {
+				position: absolute;
+				width: 150px;
+				padding: 2rem;
+				z-index: -1;
+
+				@include breakpoint($medium) {
+					width: 200px;
+				}
+				@include breakpoint($xxlarge) {
+					width: 300px;
+				}
+
+				@include breakpoint($ultraWide) {
+					width: 400px;
+				}
+
+				&:first-child {
+					@include breakpoint($medium) {
+						width: 150px;
+					}
+					@include breakpoint($xxlarge) {
+						width: 250px;
+					}
+
+					@include breakpoint($ultraWide) {
+						width: 350px;
+					}
+				}
+			}
+
+			&--top {
+				top: 25%;
+				right: 0;
+
+				@include breakpoint ($large) {
+					top: 0;
+					right: 0;
+				}
+			}
+
+			&--right {
+				right: 0;
+				bottom: 0;
+			}
+
+			&--left {
+				top: 50%;
+				left: 0;
+
+				@include breakpoint ($large) {
+					top: unset;
+					left: 0;
+					bottom: 0;
+					
+				}
 			}
 		}
 	}
