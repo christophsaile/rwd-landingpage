@@ -1,7 +1,7 @@
 @import "node_modules/@biotope/element/lib/host.mixin";
 @import "../../resources/scss/defaultSassImports.scss";
 
-@include host('rwd-cursor') {
+@include host("rwd-cursor") {
 	.cursor {
 		position: fixed;
 		left: 0;
@@ -15,7 +15,10 @@
 		top: -2.5px;
 		border-radius: 50%;
 		z-index: 12000;
-		background: $red;
+
+		@include breakpoint($medium) {
+			background: $red;
+		}
 	}
 	.cursor--canvas {
 		width: 100vw;
