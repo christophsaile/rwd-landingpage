@@ -34,9 +34,9 @@ export class RwdProducts extends Component< RwdProductsProps, RwdProductsState >
     })
     .on('enter', () => {
       images.forEach((item) => {
-        item.classList.add('animate__fadeInLeft')
+        item.classList.add('animate__fadeInUp')
         item.addEventListener('animationend', function () {
-          item.classList.remove('animate__fadeInLeft')
+          item.classList.remove('animate__fadeInUp')
         })
       })
     })
