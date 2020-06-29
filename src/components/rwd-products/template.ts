@@ -21,37 +21,40 @@ export const template = (
 								media="(min-width: 768px)"
 							/>
 							<img
+								class="animate__animated"
 								src="_assets/cigarette_pack_mobile.png"
 								alt="cigarette pack"
 							/>
-            </picture>
-            <h3>L&S Classic</h3>
-          </div>
-          <div class="products__singleItem">
+						</picture>
+						<h3>L&S Classic</h3>
+					</div>
+					<div class="products__singleItem">
 						<picture>
 							<source
 								srcset="_assets/cigarette_pack.png"
 								media="(min-width: 768px)"
 							/>
 							<img
+								class="animate__animated animate__delay-1s"
 								src="_assets/cigarette_pack_mobile.png"
 								alt="cigarette pack"
 							/>
-            </picture>
-            <h3>L&S Light</h3>
-          </div>
-          <div class="products__singleItem">
+						</picture>
+						<h3>L&S Light</h3>
+					</div>
+					<div class="products__singleItem">
 						<picture>
 							<source
 								srcset="_assets/cigarette_pack.png"
 								media="(min-width: 768px)"
 							/>
 							<img
+								class="animate__animated animate__delay-2s"
 								src="_assets/cigarette_pack_mobile.png"
 								alt="cigarette pack"
 							/>
-            </picture>
-            <h3>L&S Summer</h3>
+						</picture>
+						<h3>L&S Summer</h3>
 					</div>
 				</div>
 				<rwd-button>Jetzt Kaufen</rwd-button>
