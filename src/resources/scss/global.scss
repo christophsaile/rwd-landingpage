@@ -242,6 +242,7 @@ body {
 .recycle {
 	display: flex;
 	max-width: $xxlarge;
+	position: relative;
 
 	@include breakpoint($medium) {
 		padding: 0 7rem;

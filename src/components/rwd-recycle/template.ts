@@ -58,6 +58,8 @@ export const template = (
 				wie Flachs, Hanf und Baumwolle.
 			</p>
 		</section>
+		<div class="recycle__paper">
+		</div>
 		${createStyle(styles)}
 	`;
 };
