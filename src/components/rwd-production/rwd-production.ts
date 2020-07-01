@@ -34,8 +34,6 @@ export class RwdProduction extends Component<
 			".production__flowers svg"
 		);
 
-		console.log(flowers);
-
 		let controller = new ScrollMagic.Controller();
 		let socialAnimation = new ScrollMagic.Scene({
 			triggerElement: socialTrigger,
@@ -51,7 +49,6 @@ export class RwdProduction extends Component<
 			.on("enter", () => {
 				flowers.forEach(item => {
 					if (item.classList.contains("production__flowers--left")) {
-						console.log(item.classList);
 						item.classList.add("animate__fadeInLeft");
 						item.addEventListener("animationend", function() {
 							item.classList.remove("animate__fadeInLeft");
