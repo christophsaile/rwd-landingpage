@@ -37,7 +37,7 @@
 				left: 0;
 			}
 
-			@include breakpoint($xxlarge) {
+			@include breakpoint($xlarge) {
 				top: -8rem;
 			}
 
@@ -140,7 +140,7 @@
 				@include breakpoint($medium) {
 					width: 200px;
 				}
-				@include breakpoint($xxlarge) {
+				@include breakpoint($xlarge) {
 					width: 300px;
 				}
 
@@ -152,7 +152,7 @@
 					@include breakpoint($medium) {
 						width: 150px;
 					}
-					@include breakpoint($xxlarge) {
+					@include breakpoint($xlarge) {
 						width: 250px;
 					}
 

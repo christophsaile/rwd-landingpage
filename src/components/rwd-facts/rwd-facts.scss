@@ -35,7 +35,7 @@
 				font-size: 3rem;
 				margin-bottom: 1rem;
 
-				@include breakpoint($xlarge) {
+				@include breakpoint($xxlarge) {
 					font-size: 5rem;
 				}
 			}
@@ -46,7 +46,7 @@
 			line-height: 1.1;
 			color: $green;
 
-			@include breakpoint($xlarge) {
+			@include breakpoint($xxlarge) {
 				font-size: 15rem;
 			}
 		}
