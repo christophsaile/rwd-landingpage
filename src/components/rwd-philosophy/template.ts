@@ -19,7 +19,7 @@ export const template = (
 						srcset="../../_assets/cigarette_shot.png"
 						media="(min-width: 768px)"
 					/>
-					<img src="../../_assets/cigarette_shot_mobile.png"
+					<img class="animate__animated" src="../../_assets/cigarette_shot_mobile.png"
 					alt="hand holding a cigarette" />
 				</picture>
 				<p>
