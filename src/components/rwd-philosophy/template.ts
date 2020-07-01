@@ -16,10 +16,10 @@ export const template = (
 				<h2>Das Erwartet dich</h2>
 				<picture>
 					<source
-						srcset="https://dummyimage.com/1200x800/000/fff"
+						srcset="../../_assets/cigarette_shot.png"
 						media="(min-width: 768px)"
 					/>
-					<img src="https://dummyimage.com/800x1200/000/fff"
+					<img src="../../_assets/cigarette_shot_mobile.png"
 					alt="hand holding a cigarette" />
 				</picture>
 				<p>
