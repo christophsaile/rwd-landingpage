@@ -17,12 +17,12 @@ export const template = (
 					<div class="products__singleItem">
 						<picture>
 							<source
-								srcset="_assets/cigarette_pack.png"
+								srcset="_assets/cigarette_pack_classic.png"
 								media="(min-width: 768px)"
 							/>
 							<img
 								class="animate__animated"
-								src="_assets/cigarette_pack_mobile.png"
+								src="_assets/cigarette_pack_classic_mobile.png"
 								alt="cigarette pack"
 							/>
 						</picture>
@@ -31,12 +31,12 @@ export const template = (
 					<div class="products__singleItem">
 						<picture>
 							<source
-								srcset="_assets/cigarette_pack.png"
+								srcset="_assets/cigarette_pack_light.png"
 								media="(min-width: 768px)"
 							/>
 							<img
 								class="animate__animated animate__delay-1s"
-								src="_assets/cigarette_pack_mobile.png"
+								src="_assets/cigarette_pack_light_mobile.png"
 								alt="cigarette pack"
 							/>
 						</picture>
@@ -45,12 +45,12 @@ export const template = (
 					<div class="products__singleItem">
 						<picture>
 							<source
-								srcset="_assets/cigarette_pack.png"
+								srcset="_assets/cigarette_pack_summer.png"
 								media="(min-width: 768px)"
 							/>
 							<img
 								class="animate__animated animate__delay-2s"
-								src="_assets/cigarette_pack_mobile.png"
+								src="_assets/cigarette_pack_summer_mobile.png"
 								alt="cigarette pack"
 							/>
 						</picture>
