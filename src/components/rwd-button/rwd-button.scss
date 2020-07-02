@@ -15,7 +15,7 @@
         background-color: unset;
         text-transform: uppercase;
         
-        &:hover {
+        &:hover, &:focus, &:active {
             filter: grayscale(10%);
         }
 

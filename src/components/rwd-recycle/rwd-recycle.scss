@@ -26,7 +26,7 @@
 				flex-direction: row-reverse;
 			}
 
-			@include breakpoint ($wide) {
+			@include breakpoint($wide) {
 				margin-bottom: 5rem;
 			}
 		}
@@ -34,9 +34,14 @@
 		&__item {
 			width: 50%;
 			margin-bottom: 2rem;
+			transition: all 0.2s ease-in-out;
 
 			@include breakpoint($large) {
 				width: 20%;
+			}
+
+			&:hover {
+				transform: scale(1.1);
 			}
 
 			&:last-child {
@@ -55,8 +60,7 @@
 					width: 100px;
 				}
 
-				@include breakpoint ($wide) {
-
+				@include breakpoint($wide) {
 				}
 			}
 
@@ -69,21 +73,22 @@
 			width: 100%;
 			margin: auto;
 
-			@include breakpoint ($large) {
+			@include breakpoint($large) {
 				width: 66.66%;
 			}
 		}
 
-		&__paper {
-			position: absolute;
-			top: 0;
-			max-width: 600px;
-			width: 100%;
-			height: 100%;
-			background-image: url(../../_assets/paper_cut_recycle.png);
-			background-repeat: no-repeat;
-			background-position: left bottom;
-			z-index: -1
-		}
+		// &__paper {
+		// 	@include breakpoint($large) {
+		// 		position: absolute;
+		// 		top: 0;
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		//background-image: url(../../_assets/paper_cut_recycle_bottom.png);
+		// 		background-repeat: no-repeat;
+		// 		background-position: left bottom;
+		// 		z-index: -1;
+		// 	}
+		// }
 	}
 }

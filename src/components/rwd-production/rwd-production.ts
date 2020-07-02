@@ -35,12 +35,12 @@ export class RwdProduction extends Component<
 		);
 
 		let controller = new ScrollMagic.Controller();
-		let socialAnimation = new ScrollMagic.Scene({
-			triggerElement: socialTrigger,
-			triggerHook: "onEnter"
-		})
-			.setClassToggle(socialSection, "animate__fadeInUp")
-			.addTo(controller);
+		// let socialAnimation = new ScrollMagic.Scene({
+		// 	triggerElement: socialTrigger,
+		// 	triggerHook: "onEnter"
+		// })
+		// 	.setClassToggle(socialSection, "animate__fadeInUp")
+		// 	.addTo(controller);
 
 		let flowersAnimation = new ScrollMagic.Scene({
 			triggerElement: "#production",

@@ -65,14 +65,21 @@
 				}
 			}
 
+			div {
+				z-index: 3;
+			}
+
 			svg {
 				fill: $red;
 				width: 4rem;
 				height: auto;
 				transition: all 0.2s ease-in-out;
+				z-index: 3;
 
-				&:hover {
-					filter: grayscale(10%);
+				&:hover,
+				&:focus,
+				&:active {
+					filter: grayscale(20%);
 				}
 
 				@include breakpoint($medium) {
@@ -113,7 +120,7 @@
 			color: $white;
 			text-shadow: 0 0.1rem 0.1rem $black;
 
-			@include breakpoint ($medium) {
+			@include breakpoint($medium) {
 				text-shadow: unset;
 			}
 
@@ -166,7 +173,7 @@
 				top: 25%;
 				right: 0;
 
-				@include breakpoint ($large) {
+				@include breakpoint($large) {
 					top: 0;
 					right: 0;
 				}
@@ -181,11 +188,10 @@
 				top: 50%;
 				left: 0;
 
-				@include breakpoint ($large) {
+				@include breakpoint($large) {
 					top: unset;
 					left: 0;
 					bottom: 0;
-					
 				}
 			}
 		}
