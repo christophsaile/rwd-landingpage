@@ -4,6 +4,7 @@
 @include host("rwd-philosophy") {
 	.philosophy {
 		padding: 6rem 0;
+		overflow: hidden;
 
 		@include breakpoint($large) {
 			margin-top: 0;
