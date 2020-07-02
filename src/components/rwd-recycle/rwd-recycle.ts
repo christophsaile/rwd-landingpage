@@ -5,6 +5,7 @@ import {
 	RwdRecycleState,
 	RwdRecycleMethods
 } from "./interfaces";
+import * as ScrollMagic from "scrollmagic"
 
 export class RwdRecycle extends Component<RwdRecycleProps, RwdRecycleState> {
 	public static componentName = "rwd-recycle";
@@ -20,7 +21,30 @@ export class RwdRecycle extends Component<RwdRecycleProps, RwdRecycleState> {
 	ready() {
 		//this.setPosition();
 		//window.addEventListener("resize", this.setPosition);
+		this.initAnimation();
 	}
+
+	public initAnimation = () => {
+		const items = this.shadowRoot.querySelectorAll(".recycle__item");
+		const animationTrigger = this.shadowRoot.querySelector(
+			".recycle__container"
+		);
+
+		let controller = new ScrollMagic.Controller();
+		let scene = new ScrollMagic.Scene({
+			triggerElement: items,
+			triggerHook: "onEnter"
+		})
+			.on("enter", () => {
+				items.forEach(item => {
+					item.classList.add("animate__fadeInUp");
+					item.addEventListener("animationend", function() {
+						item.classList.remove("animate__fadeInUp");
+					});
+				});
+			})
+			.addTo(controller);
+	};
 
 	public setPosition = () => {
 		const paper: HTMLElement = this.shadowRoot.querySelector(
