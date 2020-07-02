@@ -486,3 +486,19 @@
   -webkit-animation-name: fadeInBottomRight;
   animation-name: fadeInBottomRight;
 }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate__zoomIn {
+  animation-name: zoomIn;
+}
+

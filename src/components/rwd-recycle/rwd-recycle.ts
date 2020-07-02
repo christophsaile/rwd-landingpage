@@ -37,9 +37,9 @@ export class RwdRecycle extends Component<RwdRecycleProps, RwdRecycleState> {
 		})
 			.on("enter", () => {
 				items.forEach(item => {
-					item.classList.add("animate__fadeInUp");
+					item.classList.add("animate__zoomIn");
 					item.addEventListener("animationend", function() {
-						item.classList.remove("animate__fadeInUp");
+						item.classList.remove("animate__zoomIn");
 					});
 				});
 			})
