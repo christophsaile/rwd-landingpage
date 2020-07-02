@@ -33,10 +33,7 @@ export class RwdRecycle extends Component<RwdRecycleProps, RwdRecycleState> {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(function() {
 			if (windowWidth > maxWidth) {
-				console.log(windowWidth);
-				console.log(maxWidth);
 				const calcNewPosition = -(windowWidth - maxWidth) / 2;
-				console.log(calcNewPosition);
 				paper.style.left = calcNewPosition.toLocaleString() + "px";
 			} else {
 				paper.style.left = "0px";
