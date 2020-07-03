@@ -298,10 +298,20 @@ body {
 }
 
 footer {
-	padding-top: 15rem;
+	padding-top: 4rem;
 	background-image: url(../../_assets/paper_cut_footer.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 
+	@include breakpoint ($medium) {
+		padding-top: 6rem;
+	}
+
+	@include breakpoint ($large) {
+		padding-top: 15rem;
+		background-size: unset;
+
+	}
 	@include breakpoint ($wide) {
 		background-size: contain;
 	}
