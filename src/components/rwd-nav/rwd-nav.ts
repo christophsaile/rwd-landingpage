@@ -47,6 +47,11 @@ export class RwdNav extends Component<RwdNavProps, RwdNavState> {
 			'click',
 			this.handleMenuClick
 		);
+
+		this.refs.learnMoreRef.current.addEventListener(
+			'click',
+			this.handleMenuClick
+		);
 		
 		this.handleSwipe();
 	};

@@ -23,6 +23,9 @@ export const template = (
 				<div ref=${refs.menuItemsRef} class="navMenu__items">
 					<ul>
 						<li class="navMenu__link">
+							<a href="#"><span>Einfach Leben</span></a>
+						</li>
+						<li class="navMenu__link">
 							<a href="#products"><span>Jetzt kaufen</span></a>
 						</li>
 						<li class="navMenu__link">
@@ -32,7 +35,9 @@ export const template = (
 							<a href="#production"><span>Herstellung</span></a>
 						</li>
 						<li class="navMenu__link">
-							<a href="#philosophy"><span>Unsere Philosophie</span></a>
+							<a href="#philosophy"
+								><span>Unsere Philosophie</span></a
+							>
 						</li>
 					</ul>
 				</div>
@@ -61,7 +66,20 @@ export const template = (
 					>mehr erfahren</span
 				>
 				<span ref=${refs.learnMoreIconRef}>
-				<svg class="navLearnMore__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 14"><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><polygon points="27.12 0 14 12.58 0.91 0 0 0.54 14 14 28 0.53 27.12 0 27.12 0"/></g></g></svg>				</span>
+					<svg
+						class="navLearnMore__icon"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 28 14"
+					>
+						<g id="Ebene_2" data-name="Ebene 2">
+							<g id="Ebene_1-2" data-name="Ebene 1">
+								<polygon
+									points="27.12 0 14 12.58 0.91 0 0 0.54 14 14 28 0.53 27.12 0 27.12 0"
+								/>
+							</g>
+						</g>
+					</svg>
+				</span>
 			</section>
 		</nav>
 	`;
