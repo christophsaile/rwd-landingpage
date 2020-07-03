@@ -271,6 +271,10 @@ body {
 		background-image: url(../../_assets/paper_background.jpg);
 	}
 
+	@include breakpoint($xxlarge) {
+		margin: 2rem;
+	}
+
 	rwd-production {
 		margin: auto;
 	}
@@ -294,5 +298,11 @@ body {
 }
 
 footer {
-	padding-top: 10rem;
+	padding-top: 15rem;
+	background-image: url(../../_assets/paper_cut_footer.png);
+	background-repeat: no-repeat;
+
+	@include breakpoint ($wide) {
+		background-size: contain;
+	}
 }

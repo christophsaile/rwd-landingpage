@@ -42,6 +42,13 @@
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 3);
   animation-iteration-count: calc(var(--animate-repeat) * 3);
 }
+.animate__animated.animate__delay-05s {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+}
+
 .animate__animated.animate__delay-1s {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;

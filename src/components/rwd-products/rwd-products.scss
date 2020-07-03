@@ -26,6 +26,10 @@
             padding: 3rem 0;
             box-shadow: 0 0 5rem 0 rgba($color: $black, $alpha: 0.5);
             background-color: $white;
+            // background-image: url(../../_assets/paper_cut_recycle_bottom.png), url(../../_assets/paper_cut_recycle_top.png);
+            // background-position: left bottom, right top;
+            // background-repeat: no-repeat;
+            // background-size: 60%;
 
             @include breakpoint ($medium) {
                 margin: 6rem 7rem;

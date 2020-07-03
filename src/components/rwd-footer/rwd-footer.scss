@@ -5,37 +5,95 @@
 	.footer {
 		background-color: $green;
 		color: $offWhite;
+		padding: 0 1rem 5rem 1rem;
+
+		@include breakpoint($medium) {
+			padding: 0 10rem 5rem 10rem;
+		}
 
 		&__container {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
 			max-width: $xxlarge;
 			margin: auto;
-            padding: 6rem 2rem 5rem;
-            font-family: $font-family-compressed;
-            text-transform: uppercase;
+			padding: 6rem 2rem 5rem;
+			font-family: $font-family-compressed;
+			text-transform: uppercase;
 
-			@include breakpoint($medium) {
-                padding: 7.5rem 7rem 5rem;
-			}
 			@include breakpoint($large) {
-                flex-direction: row-reverse;
+				align-items: unset;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 6rem 0 5rem;
+			}
+
+			@include breakpoint($xxlarge) {
+				width: 66.66%;
+			}
+		}
+
+		h2 {
+			color: $offWhite;
+			margin-bottom: 3rem;
+			border-bottom: 2px solid unset;
+			position: relative;
+			transition: all 0.2s ease-in-out;
+
+			@include breakpoint ($large) {
+				margin-bottom: 0;
+				margin-right: 3rem;
+			}
+
+			@include breakpoint($xxlarge) {
+				font-size: 5rem;
+			}
+
+			@include breakpoint($wide) {
+				font-size: 8rem;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				border-right: 3px solid $red;
+				border-bottom: 3px solid $red;
+				width: 10px;
+				height: 10px;
+				top: 25px;
+				left: -30px;
+				transform: translateY(-50%) rotate(-45deg);
+
+				@include breakpoint($wide) {
+					top: 45px;
+				}
+			}
+
+			&:hover {
+				color: $white;
+				text-decoration: underline;
 			}
 		}
 
 		&__follow {
 			margin-bottom: 2rem;
+			text-align: center;
 
-			@include breakpoint($large) {
-				width: 50%;
+			@include breakpoint ($large) {
+				text-align: left;
 			}
 
-			h3 {
+			h2 {
+				margin: 0;
 				margin-bottom: 2rem;
 			}
 
 			a {
 				margin-right: 1rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 
 			svg {
@@ -48,49 +106,29 @@
 					fill: $red;
 				}
 
-				@include breakpoint ($xxlarge) {
+				@include breakpoint($wide) {
 					width: 5rem;
 				}
 			}
 		}
 
-		&__nav {
-			@include breakpoint($large) {
-				width: 50%;
+		&__disclaimer {
+			text-align: center;
+
+			a {
+				margin-right: 2rem;
+				color: $offWhite;
+				text-transform: uppercase;
+				border-bottom: 2px solid $offWhite;
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 
-			li {
-				position: relative;
-				padding-left: 2rem;
-				line-height: 1;
-                margin-bottom: 2rem;
-                transition: all 0.2s ease-in-out;
-
-				&::before {
-					content: "";
-					position: absolute;
-					border-right: 2px solid $red;
-					border-bottom: 2px solid $red;
-					width: 10px;
-					height: 10px;
-					top: 50%;
-					left: 0;
-					transform: translateY(-50%) rotate(-45deg);
-                }
-                
-                &:hover {
-                    margin-left: 1rem;
-				}
-				
-				a {
-					font-size: 3rem;
-					color: $offWhite;
-					text-decoration: underline;
-
-					@include breakpoint ($xxlarge) {
-						font-size: 4rem;
-					}
-				}
+			p {
+				font-size: 2rem;
+				padding-top: 2rem;
 			}
 		}
 	}

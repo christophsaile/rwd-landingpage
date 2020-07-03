@@ -24,6 +24,7 @@
 			background-repeat: no-repeat;
 			background-size: 120%;
 			background-position: center;
+			z-index: 4;
 
 			@include breakpoint($medium) {
 				background-size: contain;
