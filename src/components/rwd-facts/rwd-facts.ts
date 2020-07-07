@@ -28,9 +28,13 @@ export class RwdFacts extends Component<RwdFactsProps, RwdFactsState> {
 			reverse: false
 		})
 			.on("start", () => {
-				counter(this.shadowRoot.querySelector('.firstNumber'), 4800, 0, 3000);
-				counter(this.shadowRoot.querySelector('.secondNumber'), 0, 100, 3000);
-				counter(this.shadowRoot.querySelector('.thirdNumber'), 0, 78, 3000);
+				counter(this.shadowRoot.querySelector('.firstNumber'), 4800, 0, 1500);
+				window.setTimeout(()=> {
+					counter(this.shadowRoot.querySelector('.secondNumber'), 0, 100, 1500);
+				},1200);
+				window.setTimeout(()=> {
+					counter(this.shadowRoot.querySelector('.thirdNumber'), 0, 78, 1500);
+				},2700)
 			})
 			.addTo(controller);
 
