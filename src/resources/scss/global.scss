@@ -170,6 +170,7 @@ body {
 		font-weight: 700;
 		text-transform: uppercase;
 		color: $green;
+		word-spacing: 0.7rem;
 
 		@include breakpoint($large) {
 			font-size: 4rem;
@@ -177,6 +178,10 @@ body {
 
 		@include breakpoint($xxlarge) {
 			font-size: 5rem;
+		}
+
+		&--noSpacing {
+			word-spacing: 0.25rem;
 		}
 	}
 
