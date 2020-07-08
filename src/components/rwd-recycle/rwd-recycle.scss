@@ -60,13 +60,12 @@
 				@include breakpoint($wide) {
 				}
 
-				&.recycle__item__correct {
+				&.recycle__item__correct, &.recycle__item__close {
 					position: absolute;
 					top: 0;
 					right: 0.5rem;
 					width: 3rem;
 					height: auto;
-					fill: $green;
 
 					@include breakpoint($large) {
 						width: 3.5rem;
@@ -76,6 +75,15 @@
 						width: 5rem;
 					}
 				}
+
+				&.recycle__item__correct {
+					fill: $green;
+				}
+
+				&.recycle__item__close {
+					fill: $red;
+				}
+				
 			}
 
 			p {
