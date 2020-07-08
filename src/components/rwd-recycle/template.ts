@@ -108,9 +108,8 @@ export const template = (
 			<p class="recycle__info">
 				Jährlich landen ca. 4,5 Trillionen Zigaretten Stummel auf der Erde,
 				diese brauchen rund 10 - 15 Jahre ehe sie sich zersetzen. Durch
-				unsere neu Entwickelten Filter, zersetzten sich unsere Filter
-				bereits nach 130 Tagen. Diese bestehen aus natürlichen Materialien
-				wie Flachs, Hanf und Baumwolle.
+				unsere neu entwickelten Filter, konnten wir die Dauer der Abbaubarkeit auf 130 Tagen reduzieren.
+				Dies erreichten wir durch das Verwenden von natürlichen Materialien wie Flachs, Hanf und Baumwolle.
 			</p>
 		</section>
 		<div class="recycle__paper">
