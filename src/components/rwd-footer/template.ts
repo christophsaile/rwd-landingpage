@@ -19,9 +19,9 @@ export const template = ( data: RwdFooterProps & RwdFooterState & RwdFooterMetho
         </div>
       </div>
       <div class="footer__disclaimer">
-        <a>Datenschutzerklärung</a>
-        <a>Impressum</a>
-        <a>Nährwertangaben</a>
+        <a href="">Datenschutzerklärung</a>
+        <a href="">Impressum</a>
+        <a href="">Nährwertangaben</a>
         <p>© 2020 L&S Cigarettes. All rights reserved.</p>
       </div>
     </section>
