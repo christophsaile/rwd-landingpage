@@ -24,6 +24,7 @@ export const template = (
 								class="animate__animated"
 								src="_assets/cigarette_pack_classic_mobile.png"
 								alt="cigarette pack"
+								loading="lazy"
 							/>
 						</picture>
 						<h3>L&S Classic</h3>
@@ -38,6 +39,7 @@ export const template = (
 								class="animate__animated animate__delay-1s"
 								src="_assets/cigarette_pack_light_mobile.png"
 								alt="cigarette pack"
+								loading="lazy"
 							/>
 						</picture>
 						<h3>L&S Light</h3>
@@ -52,6 +54,7 @@ export const template = (
 								class="animate__animated animate__delay-2s"
 								src="_assets/cigarette_pack_summer_mobile.png"
 								alt="cigarette pack"
+								loading="lazy"
 							/>
 						</picture>
 						<h3>L&S Summer</h3>
