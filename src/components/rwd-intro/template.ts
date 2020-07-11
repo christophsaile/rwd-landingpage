@@ -87,7 +87,7 @@ export const template = ( data: RwdIntroProps & RwdIntroState & RwdIntroMethods 
                         </g>
                     </g>
                 </svg>
-                <svg class="intro__text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.77 135.38">
+                <svg class="intro__text animate__animated animate__fadeIn animate__delay-2s animate__slow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.77 135.38">
                     <defs>
                         <style>
                             .cls-1 {
@@ -155,9 +155,9 @@ export const template = ( data: RwdIntroProps & RwdIntroState & RwdIntroMethods 
             <div class="intro__cigarette">
                 <picture>
                     <source srcset="_assets/cigarette_pack_open.png" media="(min-width: 768px)" />
-                    <img src="_assets/cigarette_pack_open_mobile.png" alt="cigarette pack open" />
+                    <img class="animate__animated animate__fadeIn animate__delay-3s animate__slow" src="_assets/cigarette_pack_open_mobile.png" alt="cigarette pack open" />
                 </picture>
-                <rwd-button link="#products" data-resources="[{paths: ['components/rwd-button/rwd-button.js']}]">
+                <rwd-button class="animate__animated animate__fadeIn animate__delay-4s animate__slow" link="#products" data-resources="[{paths: ['components/rwd-button/rwd-button.js']}]">
                     Zu unseren Produkten
                 </rwd-button>
             </div>
@@ -172,7 +172,7 @@ export const template = ( data: RwdIntroProps & RwdIntroState & RwdIntroMethods 
                     class="intro__textLoopContent--noSpacing">Einfach Leben</span> Zukunft</div>
         </div>
     </div>
-    <img class="intro__cut" src="../_assets/paper_cut.png" alt="paper cut">
+    <img class="intro__cut animate__animated animate__fadeIn animate__slow" src="../_assets/paper_cut.png" alt="paper cut">
     ${createStyle(styles)}
   `;
 }
