@@ -26,7 +26,7 @@
     "breakpoint-sass": "2.7.1",
     "classnames": "^2.2.6",
     "gsap": "^3.2.6",
-    "handlebars": "^4.2.0",
+    "handlebars": "^4.7.7",
     "paper": "^0.12.11",
     "sanitize.css": "^11.0.0",
     "scrollmagic": "^2.0.7",
